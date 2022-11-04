@@ -5,6 +5,6 @@
 - "Los_Pibes_CABJ"
 
 ## Integrantes
-- "Fernández Longo, Juan Ignacion"
+- "Fernández Longo, Juan Ignacio"
 - "Solari Arena, Agustin"
 - "Pérez Márquez, Lucas"
