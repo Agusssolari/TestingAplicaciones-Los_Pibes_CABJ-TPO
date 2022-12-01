@@ -26,6 +26,9 @@ class TestTC13Automated():
         self.driver.find_element(By.NAME, "email").send_keys("sample@example.com")
         self.driver.find_element(By.NAME, "password").send_keys("sample")
         self.driver.find_element(By.CSS_SELECTOR, "p:nth-child(3) > input").click()
+        # Assert user name is displayed in the page
+        user_name = self.driver.find_element(By.CLASS_NAME, "dropbtn").text
+        assert "Sample" in user_name
         self.driver.find_element(By.ID, "itemImage").click()
         self.driver.find_element(By.LINK_TEXT, "Add to Cart").click()
         self.driver.find_element(By.ID, "itemImage").click()
@@ -33,3 +36,5 @@ class TestTC13Automated():
         self.driver.find_element(By.LINK_TEXT, "CART 2").click()
         self.driver.find_element(By.CSS_SELECTOR, "div:nth-child(2) > #itemName > a").click()
         self.driver.find_element(By.CSS_SELECTOR, ".display > div:nth-child(2)").click()
+
+# En este caso de prueba estamos probando de que cuando agregas dos productos iguales al carrito y queres elimnar unos de los dos no podes, y se eliminan los dos a la vez.
